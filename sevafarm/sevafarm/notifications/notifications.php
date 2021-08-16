@@ -40,6 +40,7 @@ $status = [
 			<th><?php __('Status'); ?></th>
 			<th><?php __('Order Time'); ?></th>
 			<th><?php __('Track'); ?></th>
+			<th><?php __('Delete'); ?></th>
 		</thead>
 		<?php
 		foreach($stocks as $stock ):
@@ -55,6 +56,14 @@ $status = [
            <form method="post" action="sent.php">
 							<input type="hidden" name="id" value="<?= $stock['ID'];  ?>">
 							<input type="submit" value="Sent" class="track" >
+					</form>
+				</td>
+				<td>
+           <form method="post" action="delete.php">
+							<input type="hidden" name="id" value="<?= $stock['ID'];  ?>">
+							<input type="hidden" name="product" value="<?= $stock['product'];  ?>">
+							<input type="hidden" name="quantity" value="<?= $stock['quantity'];  ?>">
+							<input type="submit" value="delete" class="track" >
 					</form>
 				</td>
 
