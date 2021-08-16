@@ -12,14 +12,6 @@ if ($mysqli->query($sql1) === TRUE) {
 } else {
   echo "Error: " . $sql1 . "<br>" . $mysqli->error;
 }
-$sql2 = "UPDATE alstocks
-SET quantity = quantity - $quantity
-WHERE product='$product'";
-if ($mysqli->query($sql2) === TRUE) {
-  echo "<br> Record Updated Successfully";
-} else {
-  echo "Error: " . $sql1 . "<br>" . $mysqli->error;
-}
 
 
 
